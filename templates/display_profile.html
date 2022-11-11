@@ -1,0 +1,33 @@
+{% extends 'dummy.html' %}
+
+
+{% block title %}
+    <title>HOME page</title>
+{% endblock %}
+
+{% block body_block %}
+    <h1>Users Details</h1>
+    <h1>username is {{UO.username}}</h1>
+    
+
+    {% for  i in PO %}
+
+
+
+    <div class="card" style="width: 18rem;">
+        <img src="{{i.blogs.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Dhoni</h5>
+          <p class="card-text">{{i.data}}</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+
+        
+      
+    {% endfor %}
+
+    
+    
+
+{% endblock %}
